@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - FirefoxTest</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>FirefoxTest</h1>
+<p>
+  Test duration: 120,845s
+</p>
+
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">selenium.grid.app.tests.LoginTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  userLogin
+      </td>
+  <td class="duration">
+    14,358s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"webinar.test@gmail.com", "Xcg7299bnSmMuRLp9ITw"</span><br />
+    
+            <div class="testOutput">
+                        [16:35:48.188] ACTION: User login<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=dnsNotFound&amp;u=http%3A//prestashop-automation.qatestlab.com.ua/admin147ajyvk0/&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20can%E2%80%99t%20find%20the%20server%20at%20prestashop-automation.qatestlab.com.ua.<br/>
+Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T15:28:36.4Z&apos;<br/>
+System info: host: &apos;XTREME-UFOMUQ0V&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_60&apos;<br/>
+Driver info: org.openqa.selenium.firefox.FirefoxDriver<br/>
+Capabilities [{moz:profile=C:\Users\Roxy\AppData\Local\Temp\rust_mozprofile.Tl8pxtDuU0Ml, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=55.0.3, platformVersion=6.1, moz:processID=10832, browserName=firefox, javascriptEnabled=true, platformName=XP}]<br/>
+Session ID: 21845984-c372-4687-87a2-82e5c9974073</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
+              sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+              java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br />
+              org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)<br />
+              org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)<br />
+              org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br />
+              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)<br />
+              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)<br />
+              org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:897)<br />
+              selenium.grid.app.tests.LoginTest.userLogin(LoginTest.java:25)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:497)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:643)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:782)<br />
+              org.testng.TestRunner.run(TestRunner.java:632)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+              org.testng.SuiteRunner.access$000(SuiteRunner.java:39)<br />
+              org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)<br />
+              org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)<br />
+              java.util.concurrent.FutureTask.run(FutureTask.java:266)<br />
+              java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br />
+              java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br />
+              java.lang.Thread.run(Thread.java:745)<br />
+                </div>
+      </td>
+</tr>
+      </table>
+
+
+  
+</body>
+</html>

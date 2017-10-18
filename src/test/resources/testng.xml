@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="OrderSuite" parallel="tests">
+
+    <!--<test name="ChromeTest">
+        <parameter name="selenium.browser" value="chrome"/>
+        <parameter name="selenium.hub"     value="http://localhost:4444/wd/hub" />
+        <classes>
+            <class name="selenium.grid.app.tests.LoginTest"/>
+        </classes>
+    </test>-->
+
+    <test name="AndroidTest">
+        <parameter name="selenium.browser" value="android"/>
+        <!--<parameter name="selenium.hub"     value="http://localhost:4444/wd/hub" />-->
+        <classes>
+            <class name="selenium.grid.app.tests.OrderTest"/>
+        </classes>
+    </test>
+
+    <!--<test name="FirefoxTest">
+        <parameter name="selenium.browser" value="firefox"/>
+        <classes>
+            <class name="selenium.grid.app.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="IETest">
+        <parameter name="selenium.browser" value="ie"/>
+        <classes>
+            <class name="selenium.grid.app.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="PhantomJSTest">
+        <parameter name="selenium.browser" value="phantomjs"/>
+        <classes>
+            <class name="selenium.grid.app.tests.LoginTest"/>
+        </classes>
+    </test>-->
+
+</suite>
