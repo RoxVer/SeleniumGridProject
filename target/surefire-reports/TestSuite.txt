@@ -1,9 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 13.361 s <<< FAILURE! - in TestSuite
-checkOrder(selenium.grid.app.tests.OrderTest)  Time elapsed: 8.67 s  <<< FAILURE!
-java.lang.NullPointerException
-	at selenium.grid.app.tests.OrderTest.smallScroll(OrderTest.java:250)
-	at selenium.grid.app.tests.OrderTest.checkOrder(OrderTest.java:78)
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 28.701 s <<< FAILURE! - in TestSuite
+checkOrder(selenium.grid.app.tests.OrderTest)  Time elapsed: 23.906 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	Incorrect name of product in the basket:  expected [BLOUSE] but found [],
+	Incorrect order confirmation message:  expected [ВАШ ЗАКАЗ ПОДТВЕРЖДЁН] but found [ВАШ ЗАКАЗ ПОДТВЕРЖДЁН],
+	Incorrect product quantity in the order details:  expected [1] but found [1],
+	Incorrect product quantity on the product's page:  expected [0] but found [-1]
+	at selenium.grid.app.tests.OrderTest.checkOrder(OrderTest.java:195)
 

@@ -20,8 +20,6 @@ import java.util.Random;
 public class OrderTest extends BaseTest {
     int randomNumber;
     int productsQ;
-    int previousQuantity;
-    int finalQuantity;
     String nameP;
     SoftAssert asser = new SoftAssert();
     Random rand = new Random();
@@ -35,7 +33,6 @@ public class OrderTest extends BaseTest {
     public void checkVersion(String browser) {
         CustomReporter.logAction("Check version test starts");
         driver.navigate().to(Properties.getBaseUrl());
-        //driver.navigate().refresh();
         if (browser.equals("android") && driver.findElement(By.id("menu-icon")).isDisplayed()) {
             CustomReporter.log("PASSED: Mobile version is opened correctly");
         } else if (browser.equals("chrome") && !(driver.findElement(By.id("menu-icon")).isDisplayed())) {
@@ -61,7 +58,6 @@ public class OrderTest extends BaseTest {
         String prod = element.getText();
         prod = prod.substring(prod.lastIndexOf(" ") + 1);
         prod = prod.replaceAll("\\D+","");
-        productsQ = 0;
         try {
             productsQ = Integer.parseInt(prod);
         } catch (NumberFormatException e) {
@@ -80,9 +76,10 @@ public class OrderTest extends BaseTest {
         driver.findElement(By.cssSelector("li:nth-child(2) > a.nav-link")).click();
         //Info about product on product page
         //Quantity
-        String previousQString = driver.findElement(By.cssSelector("div.product-quantities > span")).getText();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"product-details\"]/div[3]/span")));
+        String previousQString = driver.findElement(By.xpath("//*[@id=\"product-details\"]/div[3]/span")).getText();
         previousQString = previousQString.replaceAll("\\D+","");
-        previousQuantity = 0;
+        int previousQuantity = 0;
         try {
             previousQuantity = Integer.parseInt(previousQString);
         } catch (NumberFormatException e) {
@@ -104,7 +101,6 @@ public class OrderTest extends BaseTest {
         driver.findElement(By.cssSelector("div.add > button")).click();
         By modalButton = By.cssSelector("div.modal-body > div > div:nth-child(2) > div > a");
         wait.until(ExpectedConditions.visibilityOfElementLocated(modalButton));
-
         CustomReporter.logAction("Click Make Order button");
         driver.findElement(modalButton).click();
 
@@ -118,10 +114,10 @@ public class OrderTest extends BaseTest {
         } catch (NumberFormatException e) {
             CustomReporter.log("Number Format Exception <br />");
         }
-        asser.assertEquals(quant, 1, "Incorrect quantity: ");
+        asser.assertEquals(quant, 1, "Incorrect quantity of product in the basket, should be 1: ");
         //Basket product name
         String basketName = driver.findElement(By.cssSelector("span > img")).getText();
-        asser.assertEquals(basketName, nameP, "Incorrect name: ");
+        asser.assertEquals(basketName, nameP, "Incorrect name of product in the basket: ");
         //Basket product price
         String actualPrice = driver.findElement(By.cssSelector("strong")).getText();
         actualPrice = actualPrice.replaceAll("\\D+","");
@@ -131,7 +127,7 @@ public class OrderTest extends BaseTest {
         } catch (NumberFormatException e) {
             CustomReporter.log("Price Format Exception");
         }
-        asser.assertEquals(basketPrice, priceP, "Incorrect price: ");
+        asser.assertEquals(basketPrice, priceP, "Incorrect price of product in the basket: ");
 
         CustomReporter.logAction("Fill personal data");
         driver.findElement(By.cssSelector("div.text-xs-center > a")).click();
@@ -151,10 +147,10 @@ public class OrderTest extends BaseTest {
         driver.findElement(By.cssSelector("#payment-confirmation > div.ps-shown-by-js > button")).click();
         String expectedMessage = "ВАШ ЗАКАЗ ПОДТВЕРЖДЁН";
         String message = driver.findElement(By.cssSelector("h3.h1.card-title")).getText();
-        asser.assertEquals(message, expectedMessage, "Order confirmation message not found: ");
+        asser.assertEquals(message, expectedMessage, "Incorrect order confirmation message: ");
 
         String lastQ = driver.findElement(By.cssSelector("div > div.col-xs-2")).getText();
-        asser.assertEquals(lastQ, 1, "Incorrect last quantity: ");
+        asser.assertEquals(lastQ, 1, "Incorrect product quantity in the order details: ");
 
         String lastP = driver.findElement(By.cssSelector("div.col-xs-5.text-xs-right.bold")).getText();
         lastP = lastP.replaceAll("\\D+","");
@@ -164,13 +160,13 @@ public class OrderTest extends BaseTest {
         } catch (NumberFormatException e) {
             CustomReporter.log("Price Format Exception");
         }
-        asser.assertEquals(lastPrice, priceP, "Incorrect last price: ");
+        asser.assertEquals(lastPrice, priceP, "Incorrect product price in the order details: ");
 
         String lastName = driver.findElement(By.cssSelector("div.col-sm-4.col-xs-9.details > span")).getText();
         if(lastName.contains(nameP)) {
-            CustomReporter.log("Last product name is correct");
+            CustomReporter.log("Product name in the order details is correct");
         } else {
-            CustomReporter.log("Last product name is NOT correct");
+            CustomReporter.log("Product name in the order details is NOT correct");
         }
         scrollPageDown();
         CustomReporter.logAction("Click Save button");
@@ -183,13 +179,14 @@ public class OrderTest extends BaseTest {
 
         String finalQString = driver.findElement(By.cssSelector("div.product-quantities > span")).getText();
         finalQString = finalQString.replaceAll("\\D+","");
-        finalQuantity = 0;
+        int finalQuantity = 0;
         try {
             finalQuantity = Integer.parseInt(finalQString);
         } catch (NumberFormatException e) {
             CustomReporter.log("Final Quantity Format Exception");
         }
-        asser.assertEquals(finalQuantity, previousQuantity, "Incorrect final product quantity: ");
+        asser.assertEquals(finalQuantity - 1, previousQuantity, "Incorrect product quantity on the product's page: ");
+        asser.assertAll();
     }
 
     public int randomNumber() {

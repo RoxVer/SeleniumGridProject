@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="13.361" tests="2" errors="0" skipped="1" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="28.701" tests="2" errors="0" skipped="1" failures="1">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="RU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Java\jdk1.8.0_60\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\Roxy\AppData\Local\Temp\surefire7512971294168966010\surefirebooter2883499968117186170.jar C:\Users\Roxy\AppData\Local\Temp\surefire7512971294168966010 2017-10-18T20-59-46_122-jvmRun1 surefire1029067383334370154tmp surefire_06724832619579417679tmp"/>
+    <property name="sun.java.command" value="C:\Users\Roxy\AppData\Local\Temp\surefire4386038973541429772\surefirebooter3482077477960254247.jar C:\Users\Roxy\AppData\Local\Temp\surefire4386038973541429772 2017-10-18T22-38-57_063-jvmRun1 surefire3309007740979852835tmp surefire_01153432227224826763tmp"/>
     <property name="surefire.test.class.path" value="D:\QAAutomationProject\SeleniumGrid\grid\target\test-classes;D:\QAAutomationProject\SeleniumGrid\grid\target\classes;C:\Users\Roxy\.m2\repository\org\seleniumhq\selenium\selenium-java\3.6.0\selenium-java-3.6.0.jar;C:\Users\Roxy\.m2\repository\org\seleniumhq\selenium\selenium-api\3.6.0\selenium-api-3.6.0.jar;C:\Users\Roxy\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.6.0\selenium-chrome-driver-3.6.0.jar;C:\Users\Roxy\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.6.0\selenium-edge-driver-3.6.0.jar;C:\Users\Roxy\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.6.0\selenium-firefox-driver-3.6.0.jar;C:\Users\Roxy\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.6.0\selenium-ie-driver-3.6.0.jar;C:\Users\Roxy\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.6.0\selenium-opera-driver-3.6.0.jar;C:\Users\Roxy\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.6.0\selenium-remote-driver-3.6.0.jar;C:\Users\Roxy\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.6.0\selenium-safari-driver-3.6.0.jar;C:\Users\Roxy\.m2\repository\org\seleniumhq\selenium\selenium-support\3.6.0\selenium-support-3.6.0.jar;C:\Users\Roxy\.m2\repository\net\bytebuddy\byte-buddy\1.7.5\byte-buddy-1.7.5.jar;C:\Users\Roxy\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Roxy\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\Roxy\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Roxy\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar;C:\Users\Roxy\.m2\repository\com\google\guava\guava\23.0\guava-23.0.jar;C:\Users\Roxy\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Roxy\.m2\repository\com\google\errorprone\error_prone_annotations\2.0.18\error_prone_annotations-2.0.18.jar;C:\Users\Roxy\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Roxy\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Roxy\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\Roxy\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\Users\Roxy\.m2\repository\net\java\dev\jna\jna\4.1.0\jna-4.1.0.jar;C:\Users\Roxy\.m2\repository\net\java\dev\jna\jna-platform\4.1.0\jna-platform-4.1.0.jar;C:\Users\Roxy\.m2\repository\com\codeborne\phantomjsdriver\1.4.2\phantomjsdriver-1.4.2.jar;C:\Users\Roxy\.m2\repository\org\testng\testng\6.9.10\testng-6.9.10.jar;C:\Users\Roxy\.m2\repository\com\beust\jcommander\1.48\jcommander-1.48.jar;C:\Users\Roxy\.m2\repository\org\beanshell\bsh\2.0b4\bsh-2.0b4.jar;C:\Users\Roxy\.m2\repository\org\uncommons\reportng\1.1.4\reportng-1.1.4.jar;C:\Users\Roxy\.m2\repository\velocity\velocity\1.4\velocity-1.4.jar;C:\Users\Roxy\.m2\repository\velocity\velocity-dep\1.4\velocity-dep-1.4.jar;C:\Users\Roxy\.m2\repository\com\google\inject\guice\4.1.0\guice-4.1.0.jar;C:\Users\Roxy\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\Roxy\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\Roxy\.m2\repository\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar;C:\Users\Roxy\.m2\repository\commons-lang\commons-lang\2.2\commons-lang-2.2.jar;C:\Users\Roxy\.m2\repository\org\apache\maven\surefire\surefire-testng-utils\2.20.1\surefire-testng-utils-2.20.1.jar;C:\Users\Roxy\.m2\repository\org\apache\maven\surefire\surefire-grouper\2.20.1\surefire-grouper-2.20.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Roxy"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Roxy\AppData\Local\Temp\surefire7512971294168966010\surefirebooter2883499968117186170.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Roxy\AppData\Local\Temp\surefire4386038973541429772\surefirebooter3482077477960254247.jar"/>
     <property name="sun.boot.class.path" value="C:\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Java\jdk1.8.0_60\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,16 +61,23 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="checkOrder" classname="selenium.grid.app.tests.OrderTest" time="8.67">
-    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
-	at selenium.grid.app.tests.OrderTest.smallScroll(OrderTest.java:250)
-	at selenium.grid.app.tests.OrderTest.checkOrder(OrderTest.java:78)
+  <testcase name="checkOrder" classname="selenium.grid.app.tests.OrderTest" time="23.906">
+    <failure message="The following asserts failed:&#10;	Incorrect name of product in the basket:  expected [BLOUSE] but found [],&#10;	Incorrect order confirmation message:  expected [ВАШ ЗАКАЗ ПОДТВЕРЖДЁН] but found [ВАШ ЗАКАЗ ПОДТВЕРЖДЁН],&#10;	Incorrect product quantity in the order details:  expected [1] but found [1],&#10;	Incorrect product quantity on the product&apos;s page:  expected [0] but found [-1]" type="java.lang.AssertionError">java.lang.AssertionError: 
+The following asserts failed:
+	Incorrect name of product in the basket:  expected [BLOUSE] but found [],
+	Incorrect order confirmation message:  expected [ВАШ ЗАКАЗ ПОДТВЕРЖДЁН] but found [ВАШ ЗАКАЗ ПОДТВЕРЖДЁН],
+	Incorrect product quantity in the order details:  expected [1] but found [1],
+	Incorrect product quantity on the product's page:  expected [0] but found [-1]
+	at selenium.grid.app.tests.OrderTest.checkOrder(OrderTest.java:195)
 </failure>
-    <system-err><![CDATA[Starting ChromeDriver 2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a) on port 31727
+    <system-out><![CDATA[PREVIOUS STRING: 
+FINAL: 0
+PREVIOUS: 0
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a) on port 38727
 Only local connections are allowed.
-окт 18, 2017 8:59:51 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+окт 18, 2017 10:39:02 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: OSS
-[9.268][SEVERE]: Unable to receive message from renderer
 ]]></system-err>
   </testcase>
   <testcase name="checkVersion" classname="selenium.grid.app.tests.OrderTest" time="0">

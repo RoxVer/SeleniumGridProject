@@ -10,6 +10,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -53,7 +54,6 @@ public abstract class BaseTest {
 
             Map<String, String> mobileEmulation = new HashMap<String, String>();
             mobileEmulation.put("deviceName", device);
-
             Map<String, Object> chromeOptions = new HashMap<String, Object>();
             chromeOptions.put("mobileEmulation", mobileEmulation);
             capabilities = DesiredCapabilities.chrome();
@@ -78,12 +78,10 @@ public abstract class BaseTest {
         } else if (browser.equals("android")) {
             Map<String, String> mobileEmulation = new HashMap<String, String>();
             mobileEmulation.put("deviceName", device);
-
             Map<String, Object> chromeOptions = new HashMap<String, Object>();
             chromeOptions.put("mobileEmulation", mobileEmulation);
             capabilities = DesiredCapabilities.chrome();
             capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-            //driver = new ChromeDriver(capabilities);
         } else {
             capabilities = DesiredCapabilities.chrome();
         }
@@ -92,19 +90,19 @@ public abstract class BaseTest {
 
     @BeforeClass
     @Parameters({"selenium.hub", "selenium.browser"})
-    public void setUp(@Optional("") String hubURL, @Optional("android") String browser) throws MalformedURLException {
-        driver = hubURL.isEmpty() ? getDriver(browser) : getRemoteDriver(hubURL, browser);
+    public void setUp(@Optional("http://localhost:4444/wd/hub") String hubURL, @Optional("android") String browser) throws MalformedURLException {
         //hubURL = http://localhost:4444/wd/hub
+        driver = hubURL.isEmpty() ? getDriver(browser) : getRemoteDriver(hubURL, browser);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 
         wait = new WebDriverWait(driver, 5);
     }
 
-    /*@AfterClass
+    @AfterClass
     public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
-    }*/
+    }
 }
