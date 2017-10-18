@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import selenium.grid.app.BaseTest;
@@ -29,7 +30,7 @@ public class OrderTest extends BaseTest {
     List<WebElement> elements;
     int id;
 
-    @Test
+    @BeforeTest
     public void checkVersion(String browser) {
         CustomReporter.logAction("Check version test starts");
         driver.navigate().to(Properties.getBaseUrl());

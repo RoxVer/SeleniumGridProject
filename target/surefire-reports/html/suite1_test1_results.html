@@ -12,7 +12,7 @@
 <body>
 <h1>AndroidTest</h1>
 <p>
-  Test duration: 27,641s
+  Test duration: 41,923s
 </p>
 
 
@@ -28,36 +28,36 @@
                   checkOrder
       </td>
   <td class="duration">
-    23,912s
+    37,802s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
-                        [22:39:02.75 ] ACTION: checkOrder test starts<br />
-                                [22:39:02.78 ] ACTION: Open URL<br />
-                                [22:39:05.723] ACTION: Click All products button<br />
-                                [22:39:08.009] ACTION: Click random product<br />
-                                [22:39:09.366] ACTION: Click info about product<br />
-                                [22:39:09.689] Previous Quantity Format Exception<br />
-                                [22:39:09.872] ACTION: Add product to basket<br />
-                                [22:39:11.219] ACTION: Click Make Order button<br />
-                                [22:39:12.757] ACTION: Compare added product with the basket product<br />
-                                [22:39:13.213] ACTION: Fill personal data<br />
-                                [22:39:23.571] Product name in the order details is NOT correct<br />
-                                [22:39:23.646] ACTION: Click Save button<br />
-                                [22:39:26.65 ] Final Quantity Format Exception<br />
+                        [00:07:15.252] ACTION: checkOrder test starts<br />
+                                [00:07:15.281] ACTION: Open URL<br />
+                                [00:07:18.159] ACTION: Click All products button<br />
+                                [00:07:20.823] ACTION: Click random product<br />
+                                [00:07:22.211] ACTION: Click info about product<br />
+                                [00:07:22.487] Previous Quantity Format Exception<br />
+                                [00:07:22.647] ACTION: Add product to basket<br />
+                                [00:07:23.847] ACTION: Click Make Order button<br />
+                                [00:07:23.988] ACTION: Compare added product with the basket product<br />
+                                [00:07:25.467] ACTION: Fill personal data<br />
+                                [00:07:34.86 ] Product name in the order details is NOT correct<br />
+                                [00:07:34.939] ACTION: Click Save button<br />
+                                [00:07:37.967] Final Quantity Format Exception<br />
                   </div>
     
 
         <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: The following asserts failed:<br/>
-	Incorrect name of product in the basket:&nbsp; expected [BLOUSE] but found [],<br/>
+	Incorrect name of product in the basket:&nbsp; expected [PRINTED DRESS] but found [],<br/>
 	Incorrect order confirmation message:&nbsp; expected [ÂÀØ ÇÀÊÀÇ ÏÎÄÒÂÅÐÆÄ¨Í] but found [?ÂÀØ ÇÀÊÀÇ ÏÎÄÒÂÅÐÆÄ¨Í],<br/>
 	Incorrect product quantity in the order details:&nbsp; expected [1] but found [1],<br/>
 	Incorrect product quantity on the product&apos;s page:&nbsp; expected [0] but found [-1]</b></a><br />
     <div class="stackTrace" id="exception-0">
               org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)<br />
-              selenium.grid.app.tests.OrderTest.checkOrder(OrderTest.java:195)<br />
+              selenium.grid.app.tests.OrderTest.checkOrder(OrderTest.java:193)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
